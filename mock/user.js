@@ -26,7 +26,7 @@ const users = {
 module.exports = [
   // user login
   {
-    url: '/vue-admin-template/user/login',
+    url: '/demo/user/login',
     type: 'post',
     response: config => {
       const { username } = config.body
@@ -39,7 +39,6 @@ module.exports = [
           message: 'Account and password are incorrect.'
         }
       }
-
       return {
         code: 20000,
         data: token
@@ -49,7 +48,7 @@ module.exports = [
 
   // get user info
   {
-    url: '/vue-admin-template/user/info\.*',
+    url: '/demo/user/info\.*',
     type: 'get',
     response: config => {
       const { token } = config.query
@@ -72,7 +71,7 @@ module.exports = [
 
   // user logout
   {
-    url: '/vue-admin-template/user/logout',
+    url: '/demo/user/logout',
     type: 'post',
     response: _ => {
       return {
